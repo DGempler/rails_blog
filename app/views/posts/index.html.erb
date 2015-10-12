@@ -1,0 +1,12 @@
+<h1>Welcome to post it</h1>
+
+<h3>Our Posts</h3>
+
+<ul>
+  <% @posts.each do |post| %>
+  <li>
+    <h5><%= link_to post.title, post %></h5>
+    <p>By: <%= post.author %></p>
+  </li>
+  <% end %>
+</ul>

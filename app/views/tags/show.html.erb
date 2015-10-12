@@ -1,0 +1,6 @@
+<h3>Single Tag View</h3>
+
+<h5>Tag Name: <%= @tag.name %>
+<br/>
+<%= link_to 'Edit Tag', edit_tag_path(@tag) %>
+<%= button_to 'Delete Tag', @tag, method: :delete %>

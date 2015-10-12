@@ -1,0 +1,16 @@
+<h3>Single Post View</h3>
+
+<h5>Post title: <%= @post.title %></h5>
+<p>Post author: <%= @post.author %></p>
+
+<p><%= @post.content %></p>
+<ul>Tags:
+  <% @post.tags.each do |tag| %>
+    <li> <%= link_to tag.name, tag %> </li>
+  <% end %>
+
+<br />
+<%= link_to 'Edit Post/Add tags', edit_post_path(@post) %>
+<%= button_to 'Delete Post', @post, method: :delete %>
+<br /><br />
+<%= link_to 'Create new tags', new_tag_path %>
